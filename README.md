@@ -20,7 +20,7 @@ Install it yourself as:
 
 ## Usage
 
-```json
+```
 $ echo '{"foo": "lorem", "bar": "ipsum"}' | prettyp format
 {
     "bar": "ipsum",
@@ -28,7 +28,7 @@ $ echo '{"foo": "lorem", "bar": "ipsum"}' | prettyp format
 }
 ```
 
-```xml
+```
 $ pbpaste | prettyp format
 <?xml version="1.0" encoding="UTF-8"?>
 <note>
@@ -39,7 +39,7 @@ $ pbpaste | prettyp format
 </note>
 ```
 
-```json
+```
 $ prettyp format --file test.json
 {
     "bar": "ipsum",
