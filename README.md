@@ -21,9 +21,24 @@ Install it yourself as:
 ## Usage
 
 ```
-pbpaste | prettyp format
-cat test.json | prettyp format
-prettyp format --file test.json
+$ echo '{"foo": "lorem", "bar": "ipsum"}' | prettyp format
+{
+    "bar": "ipsum",
+    "foo": "lorem"
+}
+$ pbpaste | prettyp format
+<?xml version="1.0" encoding="UTF-8"?>
+<note>
+  <to>Tove</to>
+  <from>Jani</from>
+  <heading>Reminder</heading>
+  <body>Don't forget me this weekend!</body>
+</note>
+$ prettyp format --file test.json
+{
+    "bar": "ipsum",
+    "foo": "lorem"
+}
 ```
 
 ### Alfred
