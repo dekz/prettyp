@@ -26,6 +26,13 @@ cat test.json | prettyp format
 prettyp format --file test.json
 ```
 
+### Alfred
+Ensure bash/zsh profile is loaded. Copies from clipboard and back to clipboard
+```
+source ~/.zshrc
+pbpaste | prettyp format | pbcopy
+```
+
 ## Contributing
 
 1. Fork it ( https://github.com/dekz/prettyp/fork )
