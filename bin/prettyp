@@ -1,0 +1,22 @@
+#!/usr/bin/env ruby
+# -*- mode: ruby -*-
+
+require 'prettyp'
+require 'thor'
+
+class CLI < Thor
+  Prettyp::Logger.logger.level = ::Logger::WARN
+  desc "format", "formats input from either stdin or file (--file) and prints to stdout"
+  option :file
+  def format
+    service = Prettyp::FormatterService.new
+    text = if options[:file]
+      service.format_from_file(File.open(options[:file], 'r'))
+    else
+      service.format_from_stdin
+    end
+    puts text
+  end
+end
+
+CLI.start(ARGV)
